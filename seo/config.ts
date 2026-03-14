@@ -1,18 +1,24 @@
 export const SITE_CONFIG = {
-  name: "BiterDevs Template",
-  description: "A premium Next.js template provided by BiterDevs.",
-  url: "https://your-domain.com", // Replace with your actual domain
+  name: "Aastha Jha — Portfolio",
+  description:
+    "Portfolio of Aastha Jha — Computer Science student, content creator, true crime storyteller, and event organizer based in Lalitpur, Nepal.",
+  url: "https://aasthajha.com.np",
   ogImage: "/og-image.png",
   links: {
-    twitter: "https://twitter.com/biterdevs",
-    github: "https://github.com/biterdevs",
+    email: "mailto:jhaaastha9@gmail.com",
+    youtube: "#",
+    linkedin: "#",
   },
   keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "BiterDevs",
+    "Aastha Jha",
+    "Portfolio",
+    "Computer Science",
+    "Content Creator",
+    "True Crime",
+    "Nepal",
+    "Sagarmatha Engineering College",
+    "NTBNS",
+    "COESIS",
   ],
 };
 
