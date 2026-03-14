@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import { Sun, Moon, MonitorPlay } from "lucide-react";
+import { MonitorPlay } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -17,7 +16,6 @@ const NAV_LINKS = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -56,17 +54,6 @@ export function Navbar() {
             </a>
           ))}
           
-          {/* Theme Toggle */}
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="ml-2 p-2 rounded-lg text-text-secondary hover:text-coral hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-          )}
-
           {/* Get In Touch */}
           <a
             href="#contact"
@@ -78,16 +65,6 @@ export function Navbar() {
 
         {/* Mobile Actions */}
         <div className="md:hidden flex items-center gap-3">
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 text-text-secondary hover:text-coral transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-          )}
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
